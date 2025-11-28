@@ -113,6 +113,21 @@ java --module-path $fx --add-modules javafx.controls,javafx.fxml -cp target/clas
 - Testes de unidade focados no domínio: regras como cálculo de total do pedido e transições de `StatusPedido` são cobertas por testes, incentivando TDD leve e segurança em refatorações.
 - Módulos e `module-info.java`: mantém compatibilidade com JPMS, declarando dependências e melhorando segurança/encapsulamento onde possível.
 
+# UML (Controllers, App, Store e Models)
+
+O diagrama completo com classes e métodos está em `docs/uml/arquitetura.puml` (PlantUML).
+
+Visualização das principais relações:
+- `App` usa `Store` e carrega FXMLs, vinculando controllers.
+- Controllers (cliente/admin) usam `Store` para operar sobre o domínio.
+- `Store` gerencia `Produto` e `Cliente`, e cria/associa `Pedido`.
+- `Pedido` compõe `ItemPedido` e usa `StatusPedido`.
+
+Para gerar uma imagem (requer PlantUML instalado):
+```
+plantuml docs/uml/arquitetura.puml
+```
+
 ## Testes
 O projeto inclui testes JUnit 5 em `src/test/java` cobrindo:
 - `Pedido.calcularTotal()` – soma dos subtotais dos itens
