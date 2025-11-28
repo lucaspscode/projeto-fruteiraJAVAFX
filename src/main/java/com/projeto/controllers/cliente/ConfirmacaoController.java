@@ -40,8 +40,6 @@ public class ConfirmacaoController {
         totalLabel.setText(String.format("Total: R$ %.2f", total));
     }
 
-    // Removido método não utilizado (formatarItem)
-
     private HBox criarCardItem(ItemPedido item) {
         VBox card = new VBox(6);
         card.getStyleClass().add("product-card");

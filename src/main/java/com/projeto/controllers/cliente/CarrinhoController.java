@@ -24,7 +24,7 @@ public class CarrinhoController {
     private Label totalLabel;
 
     @FXML
-    private Button terceiroButton; // Botão "Comprar" (fx:id no FXML)
+    private Button terceiroButton; // Botão "Comprar"
 
     @FXML
     public void initialize() {

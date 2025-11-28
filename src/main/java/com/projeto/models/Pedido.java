@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Pedido {
+
+    // Auto-incrementa o número do pedido
     private static final AtomicInteger count = new AtomicInteger(0);
     private int numero;
     private List<ItemPedido> itens;
@@ -30,21 +32,25 @@ public class Pedido {
         return itens;
     }
 
-    /** Obtém o status atual do pedido. */
-    public StatusPedido getStatus() { return status; }
+    // Obtém o status atual do pedido. 
+    public StatusPedido getStatus() {
+        return status;
+    }
 
-    /** Define explicitamente o status do pedido. */
-    public void setStatus(StatusPedido status) { this.status = status; }
+    // Define explicitamente o status do pedido.
+    public void setStatus(StatusPedido status) {
+        this.status = status;
+    }
 
-    /** Avança o status para o próximo estado lógico. */
+    // Avança o status para o próximo estado lógico.
     public StatusPedido avancarStatus() {
         this.status = this.status.proximo();
         return this.status;
     }
 
     /**
-     * Adiciona um item ao pedido. Se o produto já existir no pedido,
-     * apenas atualiza a quantidade.
+     * Adiciona um item ao pedido. Se o produto já existir no pedido, apenas
+     * atualiza a quantidade.
      */
     public void adicionarItem(Produto produto, int quantidade) {
         for (ItemPedido item : itens) {
@@ -60,7 +66,7 @@ public class Pedido {
     public void removerItem(ItemPedido item) {
         itens.remove(item);
     }
-    
+
     // Calcula o valor total do pedido.
     public double calcularTotal() {
         double totalPedido = 0.0;

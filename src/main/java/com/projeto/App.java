@@ -20,10 +20,8 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        // Determine windowed kiosk size based on primary screen, keeping 9:16 portrait
         Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
         double screenH = bounds.getHeight();
-        // Target up to 90% of height; derive width by 9:16 aspect
         double targetH = Math.min(1920, screenH * 0.9);
         double targetW = Math.min(1080, targetH * 9.0 / 16.0);
         scene = new Scene(loadFXML("home"), targetW, targetH);

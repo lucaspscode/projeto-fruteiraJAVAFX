@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Cliente {
+
+    // Auto-incrementa o ID do cliente
     private static final AtomicInteger count = new AtomicInteger(0);
     private int id;
     private String nome;

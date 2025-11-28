@@ -62,8 +62,8 @@ public class Store {
                     produtosDisponiveis.add(new Produto(nomeFruta, valor, estoque, imagePath));
                 });
         } catch (Exception e) {
-            // Fallback: quando não é possível listar (ex.: rodando de JAR),
-            // tenta carregar pelos nomes conhecidos de frutas em `precos`.
+            // Fallback: quando não é possível listar arquivos,
+            // tenta carregar pelos nomes conhecidos de frutas em precos.
             for (String fruta : precos.keySet()) {
                 // tenta png, jpg, jpeg nessa ordem
                 String[] exts = new String[] {".png", ".jpg", ".jpeg"};
