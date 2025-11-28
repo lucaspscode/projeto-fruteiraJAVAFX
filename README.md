@@ -1,3 +1,16 @@
+# Introdução
+
+Este projeto faz parte da disciplina "Programação I" e tem como objetivo consolidar os fundamentos de programação orientada a objetos em Java, utilizando o ecossistema do JavaFX para construção de interfaces gráficas. A aplicação simula uma fruteira, permitindo visualizar produtos, adicionar itens ao carrinho, confirmar pedidos e realizar operações básicas de administração, tudo organizado em camadas (models, controllers e views) para reforçar boas práticas de projeto.
+
+# Objetivos do Projeto
+
+- Desenvolver uma aplicação Java utilizando JavaFX, praticando a criação de interfaces gráficas e a navegação entre telas.
+- Aplicar conceitos de Programação Orientada a Objetos (POO): classes, encapsulamento, composição e enums, por meio dos modelos `Produto`, `Cliente`, `Pedido`, `ItemPedido` e `StatusPedido`.
+- Estruturar o código seguindo o padrão MVC simplificado (models, controllers, fxml/views), melhorando separação de responsabilidades e manutenção.
+- Implementar funcionalidades típicas de um e-commerce simples: listagem de produtos, carrinho de compras, confirmação de pedido e área administrativa.
+- Utilizar ferramentas de build e testes (Maven e JUnit) para compilar, executar e validar o comportamento da aplicação.
+- Incentivar práticas de versionamento com Git e publicação do código em um repositório público para colaboração e histórico de aprendizado.
+
 # Demo Loja JavaFX
 
 Aplicação JavaFX de demonstração para fluxo de compras com gerenciamento de pedidos e painel administrativo de status.
